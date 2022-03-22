@@ -8,6 +8,12 @@
     "strict": true,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
+    "paths": {
+      "jaya-lib": [
+        "dist/jaya-lib/jaya-lib",
+        "dist/jaya-lib"
+      ]
+    },
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
     "sourceMap": true,
@@ -21,7 +27,13 @@
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
+    "paths": {
+      "jaya-lib" : ["projects/jaya-lib/src/lib/jaya-lib.module"],
+      "jaya-lib/*" : ["projects/jaya-lib/src/lib/jaya-lib.module/*"]
+
+    }
+
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

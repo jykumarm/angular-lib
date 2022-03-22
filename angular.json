@@ -100,6 +100,37 @@
           }
         }
       }
+    },
+    "jaya-lib": {
+      "projectType": "library",
+      "root": "projects/jaya-lib",
+      "sourceRoot": "projects/jaya-lib/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/jaya-lib/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/jaya-lib/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/jaya-lib/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/jaya-lib/src/test.ts",
+            "tsConfig": "projects/jaya-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/jaya-lib/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "jaya"
